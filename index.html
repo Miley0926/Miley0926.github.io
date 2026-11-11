@@ -1,38 +1,151 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="咪的第一個個貓介紹網站。">
-  <title>ET｜個貓介紹</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js" defer></script>
+  <meta name="color-scheme" content="light dark">
+  <title>ET｜一隻逐漸成形的大肥貓</title>
+  <meta name="description" content="ET 的個人網站：一隻逐漸成形的大肥貓，與他的作惡清單。">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <main class="profile" aria-labelledby="name">
-    <header class="topbar">
-      <span class="label">咪的第一個網站</span>
-      <button id="theme-toggle" type="button" aria-pressed="false">切換為淺色</button>
-    </header>
-    <div class="avatar" aria-hidden="true">咪</div>
-    <p class="eyebrow">HELLO, WORLD!</p>
-    <!-- 練習：修改名字與自我介紹。 -->
-    <h1 id="name">嗨，咪是<span>ET</span>。</h1>
-    <p class="bio">咪正在學習 Git。</p>
-    <section aria-labelledby="interests-title">
-      <h2 id="interests-title">咪感興趣的事</h2>
-      <!-- 分支練習：在清單加入一項興趣。 -->
-      <ul class="interests">
-        <li>網頁設計</li>
-        <li>肉泥、雞肉乾</li>
-        <li>烙跑</li>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ET 首頁">🐾 ET</a>
+    <nav aria-label="主選單">
+      <ul class="nav-list">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#shape">成形進度</a></li>
+        <li><a href="#crimes">作惡清單</a></li>
+        <li><a href="#links">連結</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+      <span class="theme-label">深色模式</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, 我是</p>
+        <h1 id="hero-title">ET</h1>
+        <p class="lead">一隻逐漸成形的大肥貓。</p>
+        <p class="sub">目前仍在持續膨脹中，請與我保持一個貓身的距離（其實是兩個）。</p>
+        <p><a class="btn" href="#crimes">查看我的作惡清單</a></p>
+      </div>
+
+      <figure class="hero-art">
+        <svg id="cat-svg" viewBox="0 0 240 220" role="img" aria-label="一隻圓滾滾的橘色大肥貓">
+          <g id="cat-body">
+            <ellipse class="cat-fur" cx="120" cy="150" rx="88" ry="62" />
+            <ellipse class="cat-belly" cx="120" cy="165" rx="52" ry="38" />
+          </g>
+          <polygon class="cat-fur" points="62,62 72,20 100,48" />
+          <polygon class="cat-fur" points="178,62 168,20 140,48" />
+          <polygon class="cat-ear-in" points="70,52 74,32 90,48" />
+          <polygon class="cat-ear-in" points="170,52 166,32 150,48" />
+          <circle class="cat-fur" cx="120" cy="82" r="50" />
+          <path class="cat-stripe" d="M120 34 v14 M104 38 l3 12 M136 38 l-3 12" />
+          <ellipse class="cat-eye" cx="100" cy="82" rx="6" ry="8" />
+          <ellipse class="cat-eye" cx="140" cy="82" rx="6" ry="8" />
+          <circle class="cat-shine" cx="102" cy="79" r="2" />
+          <circle class="cat-shine" cx="142" cy="79" r="2" />
+          <path class="cat-nose" d="M114 96 h12 l-6 7 z" />
+          <path class="cat-line" d="M120 103 v5 M120 108 q-8 8 -16 2 M120 108 q8 8 16 2" />
+          <path class="cat-line" d="M80 98 l-26 -5 M80 106 l-26 4 M160 98 l26 -5 M160 106 l26 4" />
+        </svg>
+        <figcaption>ET 的最新體態（可在下方餵食更新）</figcaption>
+      </figure>
+    </section>
+
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title">關於 ET</h2>
+      <p>ET 是一隻逐漸成形的大肥貓。每天的主要工作是吃、睡，以及在主人看不到的地方搞事。</p>
+      <dl class="facts">
+        <div>
+          <dt>名字</dt>
+          <dd>ET</dd>
+        </div>
+        <div>
+          <dt>物種</dt>
+          <dd>貓（體積偏大）</dd>
+        </div>
+        <div>
+          <dt>專長</dt>
+          <dd>睡覺、裝無辜、突然跳上高處</dd>
+        </div>
+        <div>
+          <dt>目前狀態</dt>
+          <dd>持續成形中</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="shape" class="card" aria-labelledby="shape-title">
+      <h2 id="shape-title">成形進度</h2>
+      <p>ET 距離「完全體大肥貓」還有多遠？按下按鈕餵他一口。</p>
+      <label for="shape-meter" class="meter-label">成形度：<strong id="shape-value">60%</strong></label>
+      <progress id="shape-meter" max="100" value="60">60%</progress>
+      <p class="actions">
+        <button id="feed-btn" class="btn" type="button">🍖 餵一口</button>
+        <button id="reset-btn" class="btn btn-ghost" type="button">重置</button>
+      </p>
+      <p id="shape-msg" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="crimes" class="card" aria-labelledby="crimes-title">
+      <h2 id="crimes-title">作惡清單</h2>
+      <p>以下為 ET 的歷年罪證。按「記一筆」可以累計他又犯案的次數（紀錄只存在你的瀏覽器）。</p>
+      <ul class="crime-list">
+        <li class="crime" data-crime="altar">
+          <h3>🙏 爬上佛桌</h3>
+          <p>神明在上，貓在更上。完全不理會任何莊嚴的氣氛。</p>
+          <p class="counter">累計：<output class="count" aria-live="polite">0</output> 次</p>
+          <button class="btn btn-small add-crime" type="button" aria-label="記一筆：爬上佛桌">記一筆</button>
+        </li>
+        <li class="crime" data-crime="incense">
+          <h3>🔥 打翻香爐</h3>
+          <p>香灰灑滿地，貓若無其事地走開，只留下一排梅花腳印。</p>
+          <p class="counter">累計：<output class="count" aria-live="polite">0</output> 次</p>
+          <button class="btn btn-small add-crime" type="button" aria-label="記一筆：打翻香爐">記一筆</button>
+        </li>
+        <li class="crime" data-crime="roach">
+          <h3>🪳 吃蟑螂</h3>
+          <p>狩獵本能覺醒，戰利品直接入口，主人只能默默看著。</p>
+          <p class="counter">累計：<output class="count" aria-live="polite">0</output> 次</p>
+          <button class="btn btn-small add-crime" type="button" aria-label="記一筆：吃蟑螂">記一筆</button>
+        </li>
+        <li class="crime" data-crime="secret">
+          <h3>🤫 偷偷烙幹</h3>
+          <p>趁沒人注意時悄悄行動，事後面不改色，彷彿什麼都沒發生。</p>
+          <p class="counter">累計：<output class="count" aria-live="polite">0</output> 次</p>
+          <button class="btn btn-small add-crime" type="button" aria-label="記一筆：偷偷烙幹">記一筆</button>
+        </li>
+      </ul>
+      <p class="total">總計作惡：<output id="total-count" aria-live="polite">0</output> 次</p>
+    </section>
+
+    <section id="links" class="card" aria-labelledby="links-title">
+      <h2 id="links-title">連結</h2>
+      <ul class="link-list">
+        <li><a href="#crimes">📜 回到作惡清單</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">📷 ET 的
+            Instagram（請換成你的網址）</a></li>
+        <li><a href="mailto:you@example.com">✉️ 寫信給 ET 的主人（請換成你的信箱）</a></li>
+        <li><a href="#top">⬆️ 回到頁面頂端</a></li>
       </ul>
     </section>
-    <a class="github-link" href="https://github.com">到 GitHub 探索 <span aria-hidden="true">↗</span></a>
-    <footer>從一個網頁開始，記錄每一次進步。</footer>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> ET 的小窩｜本網站不含任何貓咪以外的內容。</p>
+  </footer>
 </body>
 
 </html>
